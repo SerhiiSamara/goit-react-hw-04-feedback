@@ -10,7 +10,8 @@ import { Notification } from './Notification/Notification';
 export const App = () => {
   const [good, SetGood] = useState(0);
   const [neutral, setNeutral] = useState(0);
-  const [bad, setBad] = useState(0);
+	const [bad, setBad] = useState(0);
+	const options = ['good', 'neutral', 'bad'];
 
   const coutnFeedback = e => {
     const name = e.target.name;
@@ -45,7 +46,7 @@ export const App = () => {
     <>
       <Section title="Please leave feedback">
         <FeedbackOptions
-          options={['good', 'neutral', 'bad']}
+          options={options}
           onLeaveFeedback={coutnFeedback}
         />
       </Section>
